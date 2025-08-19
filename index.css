@@ -1,0 +1,139 @@
+body {
+    background: url('https://wallpapercave.com/wp/wp2757874.gif') no-repeat center/cover;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+#bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: rgba(25, 25, 169, 0.273);
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+#bar button {
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background: #f08cea;
+
+}
+button:hover {
+    background-color: aqua;
+}
+
+.window {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+     top: 100px;
+    left: 100px;
+    background: white;
+    border: 2px solid #333;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    display: none;
+    resize: both;
+    overflow: auto;
+  }
+  .titlebar {
+    background: #333;
+    color: white;
+    padding: 5px;
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .content {
+    padding: 10px;
+    height: calc(90% - 30px);
+  }
+
+  .close-btn {
+    cursor: pointer;
+    background: red;
+    color: aliceblue;
+    font-weight: bold;
+  }
+
+  textarea {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .clock {
+    color: white;
+    display: flex;
+    justify-content: center;
+    background: rgba(25, 25, 169, 0.273);
+    height: 7vh;
+  }
+
+ .titlebar button {
+    background: red;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+ 
+  Calculator App /
+  #calculator #box {
+    width: 90%;
+    margin: 10px;
+    height: 40px;
+    font-size: 18px;
+    text-align: right;
+  }
+  .calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    padding: 10px;
+    height: calc(100% - 50px);
+    box-sizing: border-box;
+  }
+
+  .calc-buttons button {
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+   Top buttons/
+  .top-buttons {
+    margin-top: 50px;
+    padding: 10px;
+  }
+
+ /* for dot show karne ke liye */
+  #bar button.active::after{
+    content: "*";
+    color: red;
+    font-size: 20px;
+  }
+ 
+  .minimized {
+  display: none;
+}
+
+/* Maximized app (full screen like a real OS) */
+.maximized {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+}
+
+
